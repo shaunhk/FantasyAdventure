@@ -9,4 +9,12 @@ public class Healer {
     public Healer(HealType healType){
         this.healType = healType;
     }
+
+    public HealType getHealType() {
+        return this.healType;
+    }
+
+    public int getHealValue() {
+        return this.healType.getHealingValue();
+    }
 }

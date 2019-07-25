@@ -1,4 +1,6 @@
 package Inventory;
 
-public class Weapon {
+import Behaviours.IMartial;
+
+public class Weapon implements IMartial {
 }

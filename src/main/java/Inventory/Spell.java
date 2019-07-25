@@ -1,8 +1,9 @@
 package Inventory;
 
+import Behaviours.IMartial;
 import Inventory.InventoryEnums.SpellType;
 
-public class Spell {
+public class Spell implements IMartial {
 
     private SpellType spellType;
 

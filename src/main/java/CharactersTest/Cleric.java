@@ -1,4 +1,5 @@
 package CharactersTest;
+import CharactersTest.Mages.Warlock;
 import CharactersTest.PlayCharacter;
 import Inventory.Healer;
 
@@ -24,5 +25,15 @@ public class Cleric extends PlayCharacter {
 
     public void addEquipment(Healer healer) {
         this.tools.add(healer);
+    }
+
+    public void heal(PlayCharacter character, Healer healer) {
+        int oldHealth = character.getCurrentHealth();
+        character.setCurrentHealth(oldHealth += healer.getHealValue());
+        if (character.getCurrentHealth() > character.getMaxHealth()){
+            int maxHealth = character.getMaxHealth();
+            character.setCurrentHealth(maxHealth);
+        }
+        this.tools.remove(healer);
     }
 }
