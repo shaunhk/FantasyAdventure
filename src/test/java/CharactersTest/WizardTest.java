@@ -16,12 +16,14 @@ public class WizardTest {
     private Spell spell;
     private Spell spell2;
     private Creature creature;
+    private Creature creature2;
 
     @Before
     public void setup(){
         spell = new Spell(SpellType.FIREBALL);
         spell2 = new Spell(SpellType.ICESPIKE);
         creature = new Creature(CreatureType.PHOENIX);
+        creature2 = new Creature(CreatureType.OGRE);
         wizard = new Wizard(spell, creature);
     }
 
@@ -39,5 +41,11 @@ public class WizardTest {
     @Test
     public void hasCreature(){
         assertEquals(creature, wizard.getCreature());
+    }
+
+    @Test
+    public void canChangeCreature(){
+        wizard.changeCreature(creature2);
+        assertEquals(creature2, wizard.getCreature());
     }
 }

@@ -22,12 +22,12 @@ public abstract class Mage extends PlayCharacter {
         this.spell = spell;
     }
 
-
     public Creature getCreature() {
         return creature;
     }
 
-    public void setCreature(Creature creature) {
+    public void changeCreature(Creature creature) {
         this.creature = creature;
     }
+
 }

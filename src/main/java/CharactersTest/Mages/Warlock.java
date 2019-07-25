@@ -1,9 +1,10 @@
 package CharactersTest.Mages;
 
+import Inventory.Creature;
 import Inventory.Spell;
 
 public class Warlock extends Mage {
-    public Warlock(Spell spell) {
-        super(spell);
+    public Warlock(Spell spell, Creature creature) {
+        super(spell, creature);
     }
 }
